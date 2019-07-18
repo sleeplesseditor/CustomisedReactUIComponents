@@ -1,9 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App h2 {
   margin-top: 8rem;
+}
+
+.button-container {
+  margin-top: 1rem;
 }
 
 /* Navbar */
