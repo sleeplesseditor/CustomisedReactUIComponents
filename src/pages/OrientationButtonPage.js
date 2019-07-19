@@ -1,5 +1,5 @@
 import React from 'react';
-import OrientationButton from '../components/OrientationButton/OrientationButton';
+import OrientationButton from '../components/OrientationButton/OrientationButtonHooks';
 
 function DatePickerPage() {
 

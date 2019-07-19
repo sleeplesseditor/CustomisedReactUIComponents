@@ -9,7 +9,7 @@ class OrientationButton extends Component {
         }
     }
 
-    changeOrientation(){
+    handleOrientationChange(){
         this.setState({
             row: !this.state.row
         })
@@ -23,7 +23,7 @@ class OrientationButton extends Component {
                 <div className="button-container">
                     <button 
                         className="orientation-button"
-                        onClick={this.changeOrientation.bind(this)}
+                        onClick={this.handleOrientationChange.bind(this)}
                     >
                         Change Flex Direction
                     </button>
