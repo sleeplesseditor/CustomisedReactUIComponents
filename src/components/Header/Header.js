@@ -48,6 +48,13 @@ export default function Header() {
             >
                 React DatePicker
             </Link>
+            <Link 
+                to={"/orientation"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Orientation Change Button
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">

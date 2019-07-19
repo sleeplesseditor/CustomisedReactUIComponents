@@ -6,14 +6,7 @@ export default function NavButton({ children, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      css={{
-        border: "1px solid #929598",
-        background: "transparent",
-        padding: "8px",
-        fontSize: "12px",
-        marginRight: "10px",
-        cursor: "pointer"
-      }}
+      className="NavButton"
     >
       {children}
     </button>

@@ -56,17 +56,17 @@ function Datepicker() {
             onDateHover
           }}
         >
-          <div>
+          {/* <div>
             <strong>Focused input: </strong>
             {state.focusedInput}
+          </div> */}
+          <div>
+            <strong>Start Date: </strong>
+            {state.startDate && state.startDate.toLocaleDateString()}
           </div>
           <div>
-            <strong>Start date: </strong>
-            {state.startDate && state.startDate.toLocaleString()}
-          </div>
-          <div>
-            <strong>End date: </strong>
-            {state.endDate && state.endDate.toLocaleString()}
+            <strong>End Date: </strong>
+            {state.endDate && state.endDate.toLocaleDateString()}
           </div>
     
           <div className="button-container">
