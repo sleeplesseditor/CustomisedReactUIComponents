@@ -91,6 +91,14 @@ li a {
   color: #fff;
 }
 
+.object-one-none {
+  display: none;
+}
+
+.object-two-none {
+  display: none;
+}
+
 .object-one {
   background-color: rgb(253, 0, 0);
 }
@@ -104,6 +112,7 @@ li a {
   border: none;
   color: white;
   padding: 15px 32px;
+  margin: 1rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
