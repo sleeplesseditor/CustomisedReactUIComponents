@@ -10,8 +10,12 @@ export default function OrientationButton() {
   const toggle3 = () => setTwoFull(!twoFull);
 
   let container_class = direction ? "object-container-row" : "object-container-column";
-  let object1_class = oneFull ? "object-one" : "object-one-none";
-  let object2_class = twoFull ? "object-two" : "object-two-none";
+
+  let object1_class = twoFull ? "object-one" : "object-one-large";
+  let object2_class = oneFull ? "object-two" : "object-two-large";
+  
+  let object1_container = oneFull ? "object-one-container" : "object-one-container-none";
+  let object2_container = twoFull ? "object-two-container" : "object-two-container-none";
 
   let disableButtonOne = oneFull ? false : true;
   let disableButtonTwo = twoFull ? false : true;
@@ -30,19 +34,23 @@ export default function OrientationButton() {
                     onClick={toggle2}
                     disabled={disableButtonTwo}
                 >
-                    Show/Hide Object 1
+                    Show/Hide Object One
                 </button>
                 <button 
                     className="orientation-button"
                     onClick={toggle3}
                     disabled={disableButtonOne}
                 >
-                    Show/Hide Object 2
+                    Show/Hide Object Two
                 </button>
             </div>
             <div className={container_class}>
-                <div className={object1_class}>Object 1</div>
-                <div className={object2_class}>Object 2</div>
+                <div className={object1_container}>
+                    <div className={object1_class}>Object One</div>
+                </div>
+                <div className={object2_container}>
+                    <div className={object2_class}>Object Two</div>
+                </div>
             </div>
         </React.Fragment>
   );
