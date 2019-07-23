@@ -33,7 +33,14 @@ export default function Header() {
 
   return (
     <header className="Header">
-        <h3 className="navbar-heading">React Customised UI Components</h3>
+      <h3 className="navbar-heading">
+          <Link 
+            to={"/"}
+            style={{ textDecoration: 'none' }}
+          >
+            React Customised UI Components
+          </Link>
+        </h3>
       <CSSTransition
         in={!isSmallScreen || isNavVisible}
         timeout={350}
