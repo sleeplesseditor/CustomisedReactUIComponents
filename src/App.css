@@ -11,52 +11,14 @@ body {
 }
 
 .App h2 {
-  margin-top: 8rem;
+  margin-top: 14rem;
 }
 
 .button-container {
   margin-top: 1rem;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000;
-    text-decoration: none;
-    justify-content: space-between;
-    align-items: center;
-}
-
-li a {
-    text-decoration: none;
-}
-
-.navbar p,
-.navbar-heading {
-    /* display: flex; */
-    color: white;
-    text-transform: uppercase;
-    margin-left: 1.5rem;
-    font-size: 24px;
-    transition: all .2s ease-in-out;
-}
-
-.navbar p:hover {
-    color: rgb(153, 153, 153);
-}
-
-.navbar-links {
-    display: flex;
-    flex-direction: row;
-    margin-right: 1.5rem;
-}
-
 /* DatePicker */
-
 .NavButton {
   border: 1px solid #929598;
   background: transparent;
