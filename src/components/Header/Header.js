@@ -49,6 +49,13 @@ export default function Header() {
                 React DatePicker
             </Link>
             <Link 
+                to={"/updated-date-picker"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Updated React DatePicker
+            </Link>
+            <Link 
                 to={"/orientation"}
                 style={{ textDecoration: 'none' }}
                 onClick={toggleNav}
