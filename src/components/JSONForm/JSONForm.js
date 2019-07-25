@@ -20,7 +20,7 @@ class JSONForm extends Component {
                 ] 
             }, 
             { 
-                placeholder: "Enter Your Name Here", 
+                placeholder: "Enter Your Query Here", 
                 name: "remaining_values", 
                 input_type: "big_text", 
                 required: true 
@@ -62,40 +62,50 @@ class JSONForm extends Component {
                 {fields.map(form => {
                     if (form.input_type === "text") {
                         return (
-                            <InputTextField 
-                                name={form.name}
-                                placeholder={form.placeholder}
-                                required={form.required}
-                                key={form.placeholder}
-                                _handleChange={this._handleChange}
-                            />
+                            <div className="form-element-container">
+                                <InputTextField 
+                                    name={form.name}
+                                    placeholder={form.placeholder}
+                                    required={form.required}
+                                    key={form.placeholder}
+                                    _handleChange={this._handleChange}
+                                />
+                            </div>
                         );
                     }
                     if (form.input_type === "big_text") {
                         return (
-                            <TextAreaField 
-                                name={form.name}
-                                placeholder={form.placeholder}
-                                required={form.required}
-                                key={form.placeholder}
-                                _handleChange={this._handleChange}
-                            />
+                            <div className="form-element-container">
+                                <TextAreaField 
+                                    name={form.name}
+                                    placeholder={form.placeholder}
+                                    required={form.required}
+                                    key={form.placeholder}
+                                    _handleChange={this._handleChange}
+                                />
+                            </div>
                         );
                     }
                     if (form.input_type === "dropdown") {
                         return (
-                            <DropDownSelect 
-                                name={form.name}
-                                placeholder={form.placeholder}
-                                required={form.required}
-                                val={form.values}
-                                key={form.placeholder}
-                                _handleChange={this._handleChange}
-                            />
+                            <div className="form-element-container">
+                                <DropDownSelect 
+                                    name={form.name}
+                                    placeholder={form.placeholder}
+                                    required={form.required}
+                                    val={form.values}
+                                    key={form.placeholder}
+                                    _handleChange={this._handleChange}
+                                />
+                            </div>
                         );
                     }
+                    return null;
                 })}
-                <input type="submit" />
+                <input 
+                    className="json-submit-button"
+                    type="submit" 
+                />
             </form>
         )
     }

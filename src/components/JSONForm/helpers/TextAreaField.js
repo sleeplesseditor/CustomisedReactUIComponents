@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TextAreaField = ({ name, placeholder, required, _handleChange }) => (
-    <div>
+    <div className="form-input-textarea">
         <textarea 
             type="text"
             name={name}
