@@ -20,19 +20,19 @@ class JSONForm extends Component {
                 ] 
             }, 
             { 
-                placeholder: "Enter Your Query Here", 
+                placeholder: "Query", 
                 name: "remaining_values", 
                 input_type: "big_text", 
                 required: true 
             }, 
             { 
-                placeholder: "Enter Your Email Here", 
+                placeholder: "Email", 
                 name: "email", 
                 input_type: "text", 
                 required: true 
             }, 
             { 
-                placeholder: "Prefered time to call you", 
+                placeholder: "Time", 
                 name: "contact_time", 
                 input_type: "text", 
                 required: true 
@@ -62,7 +62,10 @@ class JSONForm extends Component {
                 {fields.map(form => {
                     if (form.input_type === "text") {
                         return (
-                            <div className="form-element-container">
+                            <div 
+                                className="form-element-container"
+                                key={form.placeholder}
+                            >
                                 <InputTextField 
                                     name={form.name}
                                     placeholder={form.placeholder}
@@ -75,7 +78,10 @@ class JSONForm extends Component {
                     }
                     if (form.input_type === "big_text") {
                         return (
-                            <div className="form-element-container">
+                            <div 
+                                className="form-element-container"
+                                key={form.placeholder}
+                            >
                                 <TextAreaField 
                                     name={form.name}
                                     placeholder={form.placeholder}
@@ -88,7 +94,10 @@ class JSONForm extends Component {
                     }
                     if (form.input_type === "dropdown") {
                         return (
-                            <div className="form-element-container">
+                            <div 
+                                className="form-element-container"
+                                key={form.placeholder}
+                            >
                                 <DropDownSelect 
                                     name={form.name}
                                     placeholder={form.placeholder}
