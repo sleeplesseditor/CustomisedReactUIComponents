@@ -69,6 +69,13 @@ export default function Header() {
             >
                 Orientation Change Button
             </Link>
+            <Link 
+                to={"/json-form"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Dynamic JSON Generated Form
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">
