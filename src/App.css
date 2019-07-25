@@ -107,3 +107,20 @@ body {
 .orientation-button:hover {
   background-color: rgb(70, 150, 241);
 }
+
+/* JSON FORM */
+.json-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1rem;
+}
+
+.dropdown-label {
+  margin-right: 5rem;
+  font-weight: 400;
+}
+
+.form-input-textfield {
+  width: 100%;
+}
