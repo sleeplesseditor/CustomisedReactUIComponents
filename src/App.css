@@ -153,6 +153,14 @@ th {
   text-align: left;
 }
 
+th, td {
+  padding-top: 1.5rem;
+}
+
+td {
+  padding-right: 1rem;
+}
+
 tr {
   width: 100%;
 }
