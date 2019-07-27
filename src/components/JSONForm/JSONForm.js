@@ -55,67 +55,70 @@ class JSONForm extends Component {
     render() {
         const { fields } = this.state;
         return (
-            <form 
-                className="json-form"
-                onSubmit={this.submitForm}
-            >
-                {fields.map(form => {
-                    if (form.input_type === "text") {
-                        return (
-                            <div 
-                                className="form-element-container"
-                                key={form.placeholder}
-                            >
-                                <InputTextField 
-                                    name={form.name}
-                                    placeholder={form.placeholder}
-                                    required={form.required}
+            <React.Fragment>
+                <h3>JSON Form Variant</h3>
+                <form 
+                    className="json-form"
+                    onSubmit={this.submitForm}
+                >
+                    {fields.map(form => {
+                        if (form.input_type === "text") {
+                            return (
+                                <div 
+                                    className="form-element-container"
                                     key={form.placeholder}
-                                    _handleChange={this._handleChange}
-                                />
-                            </div>
-                        );
-                    }
-                    if (form.input_type === "big_text") {
-                        return (
-                            <div 
-                                className="form-element-container"
-                                key={form.placeholder}
-                            >
-                                <TextAreaField 
-                                    name={form.name}
-                                    placeholder={form.placeholder}
-                                    required={form.required}
+                                >
+                                    <InputTextField 
+                                        name={form.name}
+                                        placeholder={form.placeholder}
+                                        required={form.required}
+                                        key={form.placeholder}
+                                        _handleChange={this._handleChange}
+                                    />
+                                </div>
+                            );
+                        }
+                        if (form.input_type === "big_text") {
+                            return (
+                                <div 
+                                    className="form-element-container"
                                     key={form.placeholder}
-                                    _handleChange={this._handleChange}
-                                />
-                            </div>
-                        );
-                    }
-                    if (form.input_type === "dropdown") {
-                        return (
-                            <div 
-                                className="form-element-container"
-                                key={form.placeholder}
-                            >
-                                <DropDownSelect 
-                                    name={form.name}
-                                    placeholder={form.placeholder}
-                                    required={form.required}
-                                    val={form.values}
+                                >
+                                    <TextAreaField 
+                                        name={form.name}
+                                        placeholder={form.placeholder}
+                                        required={form.required}
+                                        key={form.placeholder}
+                                        _handleChange={this._handleChange}
+                                    />
+                                </div>
+                            );
+                        }
+                        if (form.input_type === "dropdown") {
+                            return (
+                                <div 
+                                    className="form-element-container"
                                     key={form.placeholder}
-                                    _handleChange={this._handleChange}
-                                />
-                            </div>
-                        );
-                    }
-                    return null;
-                })}
-                <input 
-                    className="json-submit-button"
-                    type="submit" 
-                />
-            </form>
+                                >
+                                    <DropDownSelect 
+                                        name={form.name}
+                                        placeholder={form.placeholder}
+                                        required={form.required}
+                                        val={form.values}
+                                        key={form.placeholder}
+                                        _handleChange={this._handleChange}
+                                    />
+                                </div>
+                            );
+                        }
+                        return null;
+                    })}
+                    <input 
+                        className="json-submit-button"
+                        type="submit" 
+                    />
+                </form>
+            </React.Fragment>
         )
     }
 };

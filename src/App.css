@@ -11,7 +11,7 @@ body {
 }
 
 .App h2 {
-  margin-top: 14rem;
+  margin-top: 8rem;
 }
 
 .button-container {
@@ -123,6 +123,10 @@ body {
   padding: 1rem;
 }
 
+.json-form-label {
+  margin-right: 1rem;
+}
+
 .form-input-textarea,
 .form-input-textfield,
 .form-input-select {
@@ -143,4 +147,12 @@ body {
 
 .form-element-container {
   margin-top: 1.5rem;
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  width: 100%;
 }

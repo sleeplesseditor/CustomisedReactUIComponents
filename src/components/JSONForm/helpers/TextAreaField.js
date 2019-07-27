@@ -2,7 +2,7 @@ import React from 'react';
 
 const TextAreaField = ({ name, placeholder, required, _handleChange }) => (
     <div className="form-input-textarea">
-        <label className="dropdown-label">{placeholder}</label>
+        <label className="json-form-label">{placeholder}</label>
         <textarea 
             type="text"
             name={name}

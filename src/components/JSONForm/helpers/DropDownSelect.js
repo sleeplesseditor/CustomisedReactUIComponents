@@ -2,7 +2,7 @@ import React from 'react';
 
 const DropDownSelect = ({ name, placeholder, required, val, _handleChange }) => (
     <div className="form-input-select">
-        <label className="dropdown-label">{placeholder}</label>
+        <label className="json-form-label">{placeholder}</label>
         <select 
             name={name} 
             required={required} 
