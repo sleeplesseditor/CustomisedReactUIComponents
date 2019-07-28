@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { DropDownSelect, InputTextField, TextAreaField } from './helpers';
-
 class JSONFormTable extends Component {
     state = {
         fields: [ 
@@ -95,48 +94,20 @@ class JSONFormTable extends Component {
         )
     }
 
-    renderEmailInput = () => {
+    renderInput = (name) => {
         const { fields } = this.state;
             return (
                 <td>
-                    {fields.map(form => {
-                        if (form.placeholder === "Email") {
-                            return (
-                                <InputTextField 
-                                    name={form.name}
-                                    required={form.required}
-                                    key={form.placeholder}
-                                    _handleChange={this._handleChange}
-                                />
-                            );
-                        }
-                        return null; 
-                    })}
+                    <InputTextField
+                        name={name}
+                        placeholder={fields.placeholder}
+                        required={fields.required}
+                        key={fields.placeholder}
+                        _handleChange={this._handleChange}
+                    />
                 </td>
         )
     }
-
-    renderTimeInput = () => {
-        const { fields } = this.state;
-            return (
-                <td>
-                    {fields.map(form => {
-                        if (form.placeholder === "Time") {
-                            return (
-                                <InputTextField 
-                                    name={form.name}
-                                    required={form.required}
-                                    key={form.placeholder}
-                                    _handleChange={this._handleChange}
-                                />
-                            );
-                        }
-                        return null; 
-                    })}
-                </td>
-        )
-    }
-    
 
     render() {
         return (
@@ -158,9 +129,9 @@ class JSONFormTable extends Component {
                             </tr>
                             <tr>
                                 <th>Email</th>
-                                    {this.renderEmailInput()}
+                                    {this.renderInput('email')}
                                 <th>Time</th>
-                                    {this.renderTimeInput()}
+                                    {this.renderInput('contact_time')}
                             </tr>
                         </tbody>
                     </table>
