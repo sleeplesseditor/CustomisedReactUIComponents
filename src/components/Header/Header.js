@@ -76,6 +76,13 @@ export default function Header() {
             >
                 Dynamic JSON Generated Form
             </Link>
+            <Link 
+                to={"/infinite-scroll"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Infinite Scroll
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">
