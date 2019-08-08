@@ -6,7 +6,7 @@ function InfiniteScrollPage() {
 
   return (
     <React.Fragment>
-        <div className="App">
+        <div className="infinite-scroll-container">
             <h2>Infinite Scroll</h2>
             <InfiniteScroll 
                 list={MY_ENDLESS_LIST} 
