@@ -214,7 +214,35 @@ const MY_ENDLESS_LIST = [
     {
       key: 55,
       value: "AS"
-    }
+    },
+    {
+        key: 56,
+        value: "AT"
+      },
+      {
+        key: 57,
+        value: "AU"
+      },
+      {
+        key: 58,
+        value: "AV"
+      },
+      {
+        key: 59,
+        value: "AW"
+      },
+      {
+        key: 60,
+        value: "AX"
+      },
+      {
+        key: 61,
+        value: "AY"
+      },
+      {
+        key: 62,
+        value: "AZ"
+      },
   ];
   
   export default MY_ENDLESS_LIST;

@@ -176,7 +176,7 @@ tr {
   padding: 70px 10px;
   margin-bottom: 20px;
   border-radius: 10px;
-  position: absolute;
-  width: 1050px;
-  margin: 0px 70px;
+  width: 1000px;
+  margin: 0px 60px;
+  text-align: center;
 }
