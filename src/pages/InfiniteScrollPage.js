@@ -1,5 +1,6 @@
 import React from 'react';
-import InfiniteScroll from '../components/InfiniteScroll/InfiniteScroll';
+// import InfiniteScroll from '../components/InfiniteScroll/InfiniteScroll';
+import InfiniteScrollHooks from '../components/InfiniteScroll/InfiniteScroll';
 import MY_ENDLESS_LIST from '../components/InfiniteScroll/Constants';
 
 function InfiniteScrollPage() {
@@ -8,7 +9,7 @@ function InfiniteScrollPage() {
     <React.Fragment>
         <div className="infinite-scroll-container">
             <h2>Infinite Scroll</h2>
-            <InfiniteScroll 
+            <InfiniteScrollHooks 
                 list={MY_ENDLESS_LIST} 
                 height={195}
             />
