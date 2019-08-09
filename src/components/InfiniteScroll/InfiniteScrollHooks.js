@@ -1,45 +1,43 @@
-import React, { createRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 const THRESHOLD = 10;
 
-export default function InfiniteScrollHooks() {
+export default function InfiniteScrollHooks(props) {
 
     const [start, setStart] = useState(0);
     const [end, setEnd] = useState(THRESHOLD);
-    let $bottomElement = createRef();
-    let $topElement = createRef();
+    const $bottomElement = useRef();
+    const $topElement = useRef();
 
-    const intiateScrollObserver = (observer) => {
-        const options = {
+    const { list, height } = props;
+    const options = {
         root: null,
         rootMargin: "0px",
         threshold: 0.1
-        };
-        observer = new IntersectionObserver(callback, options);
-        if ($topElement.current) {
-        observer.observe($topElement.current);
-        }
-        if ($bottomElement.current) {
-        observer.observe($bottomElement.current);
+    };
+
+    const updateState = (newStart, newEnd) => {
+        if (start !== newStart || end !== newEnd) {
+            resetObservation();
+            setStart(newStart);
+            setEnd(newEnd);
         }
     };
 
-    useEffect(() => {
-        intiateScrollObserver();
-    }, []);
+    const resetObservation = () => {
+        observer.unobserve($bottomElement.current);
+        observer.unobserve($topElement.current);
+    };
 
-    useEffect(() => {
-        if (
-            setEnd !== end ||
-            setStart !== start
-        ) {
-            intiateScrollObserver();
-        }
-    }, [start, end]);
+    const getReference = (index, isLastIndex) => {
+        if (index === 0) return $topElement;
+        if (isLastIndex) return $bottomElement;
+        return null;
+    };
 
     const callback = (entries, observer) => {
         entries.forEach((entry, index) => {
-        const listLength = this.props.list.length;
+        const listLength = list.length;
         // Scroll Down
         // We make increments and decrements in 10s
         if (entry.isIntersecting && entry.target.id === "bottom") {
@@ -63,30 +61,33 @@ export default function InfiniteScrollHooks() {
         });
     };
 
-    const resetObservation = (observer) => {
-        observer.unobserve($bottomElement.current);
-        observer.unobserve($topElement.current);
-        $bottomElement = React.createRef();
-        $topElement = React.createRef();
-    };
+    let observer = new IntersectionObserver(callback, options);
 
-    const updateState = (newStart, newEnd) => {
-        if (start !== newStart || end !== newEnd) {
-        resetObservation();
-        setStart(newStart);
-        setEnd(newEnd);
+    const intiateScrollObserver = () => {
+        if ($topElement.current) {
+            observer.observe($topElement.current);
+        }
+        if ($bottomElement.current) {
+            observer.observe($bottomElement.current);
         }
     };
 
-    const getReference = (index, isLastIndex) => {
-        if (index === 0) return $topElement;
-        if (isLastIndex) return $bottomElement;
-        return null;
-    };
+    useEffect(() => {
+        intiateScrollObserver();
+    }, []);
 
-    const { list, height } = this.props;
+    useEffect(() => {
+        if (
+            setEnd !== end ||
+            setStart !== start
+        ) {
+            intiateScrollObserver();
+        }
+    }, [start, end]);
+
     const updatedList = list.slice(start, end);
     const lastIndex = updatedList.length - 1;
+    
     return (
       <ul style={{ position: "relative" }}>
         {updatedList.map((item, index) => {
