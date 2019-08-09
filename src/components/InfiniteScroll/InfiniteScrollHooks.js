@@ -89,7 +89,7 @@ export default function InfiniteScrollHooks(props) {
     const lastIndex = updatedList.length - 1;
     
     return (
-      <ul style={{ position: "relative" }}>
+      <ul>
         {updatedList.map((item, index) => {
           const top = height * (index + start) + "px";
           const refVal = getReference(index, index === lastIndex);
