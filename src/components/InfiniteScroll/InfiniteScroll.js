@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-const THRESHOLD = 10;
-
+const THRESHOLD = 15;
 class InfiniteScroll extends Component {
   constructor(props) {
     super(props);

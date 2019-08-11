@@ -172,8 +172,8 @@ tr {
 /* Infinite Scroll */
 
 .scroll-container {
-  position: absolute;
-  margin-top: 10rem;
+  position: relative;
+  width: 75vw;
 }
 
 .li-card {
@@ -187,4 +187,5 @@ tr {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
+  position: absolute;
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 
-const THRESHOLD = 10;
+const THRESHOLD = 15;
 
 export default function InfiniteScrollHooks(props) {
 
