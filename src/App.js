@@ -6,6 +6,7 @@ import UpdatedDatePickerPage from './pages/DatePickerUpdatePage';
 import OrientationButtonPage from './pages/OrientationButtonPage';
 import JSONFormPage from './pages/JSONFormPage';
 import InfiniteScrollPage from './pages/InfiniteScrollPage';
+import ProgressCirclePage from './pages/ProgressCirclePage';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/orientation" component={OrientationButtonPage} />
           <Route exact path="/json-form" component={JSONFormPage} />
           <Route exact path="/infinite-scroll" component={InfiniteScrollPage} />
+          <Route exact path="/progress-circle" component={ProgressCirclePage} />
         </Switch>
     </Router>
   );

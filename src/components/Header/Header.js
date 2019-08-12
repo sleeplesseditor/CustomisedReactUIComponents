@@ -83,6 +83,13 @@ export default function Header() {
             >
                 Infinite Scroll
             </Link>
+            <Link 
+                to={"/progress-circle"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Progress Circle
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">
