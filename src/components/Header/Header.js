@@ -90,6 +90,13 @@ export default function Header() {
             >
                 Progress Circle
             </Link>
+            <Link 
+                to={"/background-video"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Background Video
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">

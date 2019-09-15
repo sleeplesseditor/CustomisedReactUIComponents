@@ -7,6 +7,7 @@ import OrientationButtonPage from './pages/OrientationButtonPage';
 import JSONFormPage from './pages/JSONFormPage';
 import InfiniteScrollPage from './pages/InfiniteScrollPage';
 import ProgressCirclePage from './pages/ProgressCirclePage';
+import BackgroundVideoPage from './pages/BackgroundVideoPage';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/json-form" component={JSONFormPage} />
           <Route exact path="/infinite-scroll" component={InfiniteScrollPage} />
           <Route exact path="/progress-circle" component={ProgressCirclePage} />
+          <Route exact path="/background-video" component={BackgroundVideoPage} />
         </Switch>
     </Router>
   );
