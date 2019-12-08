@@ -97,6 +97,13 @@ export default function Header() {
             >
                 Background Video
             </Link>
+            <Link 
+                to={"/browser-detection"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Browser Detection 
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">

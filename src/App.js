@@ -8,6 +8,7 @@ import JSONFormPage from './pages/JSONFormPage';
 import InfiniteScrollPage from './pages/InfiniteScrollPage';
 import ProgressCirclePage from './pages/ProgressCirclePage';
 import BackgroundVideoPage from './pages/BackgroundVideoPage';
+import BrowserDetectionPage from './pages/BrowserDetectionPage';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/infinite-scroll" component={InfiniteScrollPage} />
           <Route exact path="/progress-circle" component={ProgressCirclePage} />
           <Route exact path="/background-video" component={BackgroundVideoPage} />
+          <Route exact path="/browser-detection" component={BrowserDetectionPage} />
         </Switch>
     </Router>
   );
