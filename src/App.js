@@ -12,6 +12,7 @@ const InfiniteScrollPage = React.lazy(() => import('./pages/InfiniteScrollPage')
 const ProgressCirclePage = React.lazy(() => import('./pages/ProgressCirclePage'));
 const BackgroundVideoPage = React.lazy(() => import('./pages/BackgroundVideoPage'));
 const BrowserDetectionPage = React.lazy(() => import('./pages/BrowserDetectionPage'));
+const CollapsibleContentPage = React.lazy(() => import('./pages/CollapsibleContentPage'));
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/progress-circle" component={LazyLoader(ProgressCirclePage)} />
           <Route exact path="/background-video" component={LazyLoader(BackgroundVideoPage)} />
           <Route exact path="/browser-detection" component={LazyLoader(BrowserDetectionPage)} />
+          <Route exact path="/collapsible-content" component={LazyLoader(CollapsibleContentPage)} />
         </Switch>
     </Router>
   );

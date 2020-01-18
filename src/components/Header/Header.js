@@ -104,6 +104,13 @@ export default function Header() {
             >
                 Browser Detection 
             </Link>
+            <Link 
+                to={"/collapsible-content"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Collapsible Content 
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">
