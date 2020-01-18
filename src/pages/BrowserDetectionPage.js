@@ -46,7 +46,7 @@ function BrowserDetectionPage() {
     <React.Fragment>
         <div className="App">
             <h2>Browser Detection</h2>
-            {content()}
+            <b>Browser Detected:</b> {content()}
         </div>
     </React.Fragment>
   );

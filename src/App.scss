@@ -27,23 +27,25 @@ body {
   margin-right: 10px;
   cursor: pointer;
   transition: all .2s ease-in-out;
+
+  &:hover {
+    background: #929598;
+    color: #fff;
+  }
 }
 
-.NavButton:hover {
-  background: #929598;
-  color: #fff;
-}
+.object-container {
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.object-container-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.object-container-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 /* Orientation Button */
@@ -56,27 +58,23 @@ body {
 .object-one-container,
 .object-two-container {
   margin: 1.5rem;
-}
 
-.object-one-container-none {
-  display: none;
-}
-
-.object-two-container-none {
-  display: none;
+  &-none {
+    display: none;
+  }
 }
 
 .object-one {
   background-color: rgb(253, 0, 0);
   padding: 1.5rem;
   margin: 1rem;
-}
 
-.object-one-large {
-  border: 1px solid #000;
-  color: #fff;
-  background-color: rgb(253, 0, 0);
-  padding: 5rem;
+  &-large {
+    border: 1px solid #000;
+    color: #fff;
+    background-color: rgb(253, 0, 0);
+    padding: 5rem;
+  }
 }
 
 .object-two {
@@ -85,13 +83,13 @@ body {
   background-color: rgb(0, 38, 253);
   padding: 1.5rem;
   margin: 1rem;
-}
 
-.object-two-large {
-  border: 1px solid #000;
-  color: #fff;
-  background-color: rgb(0, 38, 253);
-  padding: 5rem;
+  &-large {
+    border: 1px solid #000;
+    color: #fff;
+    background-color: rgb(0, 38, 253);
+    padding: 5rem;
+  }
 }
 
 .orientation-button,
@@ -107,16 +105,15 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: rgb(70, 150, 241);
+  }
 }
 
 .json-submit-button {
   width: 50%;
   align-self: center;
-}
-
-.orientation-button:hover,
-.json-submit-button:hover {
-  background-color: rgb(70, 150, 241);
 }
 
 /* JSON FORM */
@@ -125,10 +122,10 @@ body {
   flex-direction: column;
   width: 50%;
   padding: 1rem;
-}
 
-.json-form-label {
-  margin-right: 1rem;
+  &-label {
+    margin-right: 1rem;
+  }
 }
 
 .form-input-textarea,
