@@ -68,6 +68,9 @@ class CollapsibleContent extends Component {
                         {this.state.content}
                     </div>
                 </div>
+                <div className="collapsible-container__external-object">
+                    <p>External Object</p>
+                </div>
             </div>
       )
     }
