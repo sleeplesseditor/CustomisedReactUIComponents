@@ -7,34 +7,16 @@ class CollapsibleContent extends Component {
         this.tab = React.createRef();
         this.state = {
             active: false,
-            content: []
         }
-        
+
         this.setTab = this.setTab.bind(this);
-        this.loadData = this.loadData.bind(this);
         this.getWrapperStyle = this.getWrapperStyle.bind(this);
         this.toggle = this.toggle.bind(this);
-    }
-
-    componentDidMount() {
-        this.loadData();
     }
     
     setTab(ele) {
         this.tab = ele;
     }
-
-    loadData() {
-        setTimeout(() => {
-        const elements = [];
-        for(let i =0; i < Math.random()*30; i++) {
-            elements.push(<div key={i} className="collapsible-container__element">Hidden Element</div>);
-        }
-        this.setState({ content: elements })
-        console.log(this.state);
-        }, 1000);
-    }
-    
 
     getWrapperStyle() {
         console.log(this.state, this.tab)
@@ -56,16 +38,10 @@ class CollapsibleContent extends Component {
                     >
                         {this.state.active ? 'See Less': 'See More'}
                     </button>
-                    <button 
-                        onClick={this.loadData}
-                        className="collapsible-container__button"
-                    >
-                        Load Data
-                    </button>
                 </div>
                 <div className="collapsible-container__wrapper" style={this.getWrapperStyle()}>
                     <div ref={this.tab}>
-                        {this.state.content}
+                        {this.props.content}
                     </div>
                 </div>
                 <div className="collapsible-container__external-object">
@@ -75,5 +51,9 @@ class CollapsibleContent extends Component {
       )
     }
   }
+
+CollapsibleContent.defaultProps = {
+    content: []
+}
 
 export default CollapsibleContent;

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState,useCallback } from "react";
 
 const THRESHOLD = 15;
 
@@ -63,18 +63,18 @@ export default function InfiniteScrollHooks(props) {
 
     let observer = new IntersectionObserver(callback, options);
 
-    const intiateScrollObserver = () => {
+    const intiateScrollObserver = useCallback(() => {
         if ($topElement.current) {
             observer.observe($topElement.current);
         }
         if ($bottomElement.current) {
             observer.observe($bottomElement.current);
         }
-    };
+    });
 
     useEffect(() => {
         intiateScrollObserver();
-    }, []);
+    }, [intiateScrollObserver]);
 
     useEffect(() => {
         if (
@@ -83,7 +83,7 @@ export default function InfiniteScrollHooks(props) {
         ) {
             intiateScrollObserver();
         }
-    }, [start, end]);
+    }, [start, end, intiateScrollObserver]);
 
     const updatedList = list.slice(start, end);
     const lastIndex = updatedList.length - 1;
