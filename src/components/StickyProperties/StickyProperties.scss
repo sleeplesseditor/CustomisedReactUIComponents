@@ -1,0 +1,25 @@
+.sticky {
+    &__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__item {
+        margin: 10px;
+        border: 1px solid black;
+        background-color: rgb(192, 191, 191);
+        height: 1200px;
+        width: 100px;
+
+        &-head {
+            border: 1px solid black;
+            background-color: red;
+            height: 100px;
+            top: 0;
+            position: sticky;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}

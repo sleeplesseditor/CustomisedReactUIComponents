@@ -13,6 +13,7 @@ const ProgressCirclePage = React.lazy(() => import('./pages/ProgressCirclePage')
 const BackgroundVideoPage = React.lazy(() => import('./pages/BackgroundVideoPage'));
 const BrowserDetectionPage = React.lazy(() => import('./pages/BrowserDetectionPage'));
 const CollapsibleContentPage = React.lazy(() => import('./pages/CollapsibleContentPage'));
+const StickyPropertiesPage = React.lazy(() => import('./pages/StickyPropertiesPage'));
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/background-video" component={LazyLoader(BackgroundVideoPage)} />
           <Route exact path="/browser-detection" component={LazyLoader(BrowserDetectionPage)} />
           <Route exact path="/collapsible-content" component={LazyLoader(CollapsibleContentPage)} />
+          <Route exact path="/sticky-properties" component={LazyLoader(StickyPropertiesPage)} />
         </Switch>
     </Router>
   );

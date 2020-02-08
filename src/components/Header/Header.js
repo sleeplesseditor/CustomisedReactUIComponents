@@ -111,6 +111,13 @@ export default function Header() {
             >
                 Collapsible Content 
             </Link>
+            <Link 
+                to={"/sticky-properties"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Sticky Properties 
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">
