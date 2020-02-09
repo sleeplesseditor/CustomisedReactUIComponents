@@ -9,12 +9,6 @@ class StickyProperties extends Component {
         }
     }
 
-    // componentWillMount(){
-    //     this.setState({
-    //         objectNumber: Math.floor(Math.random() * 10)
-    //     })
-    // }
-
     render(){
         const { objectNumber} = this.state;
         return (
@@ -29,6 +23,7 @@ class StickyProperties extends Component {
                         >
                             HEAD
                         </div>
+                        <div className="sticky__item-body"></div>
                     </div>
                 ))}
             </div>

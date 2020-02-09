@@ -2,12 +2,11 @@
     &__container {
         display: flex;
         flex-direction: row;
+        height: 1500px;
     }
 
     &__item {
         margin: 10px;
-        border: 1px solid black;
-        background-color: rgb(192, 191, 191);
         height: 1200px;
         width: 100px;
 
@@ -18,8 +17,17 @@
             top: 0;
             position: sticky;
             color: #fff;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-weight: bold;
+        }
+
+        &-body {
+            border: 1px solid black;
+            margin-top: 20px;
+            height: 1075px;
+            background-color: rgb(192, 191, 191);
         }
     }
 }
