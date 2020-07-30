@@ -14,6 +14,7 @@ const BackgroundVideoPage = React.lazy(() => import('./pages/BackgroundVideoPage
 const BrowserDetectionPage = React.lazy(() => import('./pages/BrowserDetectionPage'));
 const CollapsibleContentPage = React.lazy(() => import('./pages/CollapsibleContentPage'));
 const StickyPropertiesPage = React.lazy(() => import('./pages/StickyPropertiesPage'));
+const UploadPreviewPage = React.lazy(() => import('./pages/UploadPreviewPage'));
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/browser-detection" component={LazyLoader(BrowserDetectionPage)} />
           <Route exact path="/collapsible-content" component={LazyLoader(CollapsibleContentPage)} />
           <Route exact path="/sticky-properties" component={LazyLoader(StickyPropertiesPage)} />
+          <Route exact path="/upload-preview" component={LazyLoader(UploadPreviewPage)} />
         </Switch>
     </Router>
   );

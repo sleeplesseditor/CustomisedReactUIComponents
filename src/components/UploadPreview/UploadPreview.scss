@@ -1,0 +1,33 @@
+.upload-container {
+    border: 0.25 solid grey;
+    background-color: #ededee;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 13px 13px 20px #cbced1,
+            -13px -13px 20px #fff;
+    padding: 1rem;
+
+    &-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &-input {
+        border: 0.25 solid grey;
+        box-shadow: 13px 13px 20px #cbced1,
+            -13px -13px 20px #fff;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            box-shadow: 13px 13px 20px #969697,
+            -13px -13px 20px #fff;
+        }
+    }
+}

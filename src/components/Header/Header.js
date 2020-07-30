@@ -118,6 +118,13 @@ export default function Header() {
             >
                 Sticky Properties 
             </Link>
+            <Link 
+                to={"/upload-preview"}
+                style={{ textDecoration: 'none' }}
+                onClick={toggleNav}
+            >
+                Upload Preview 
+            </Link>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="header-button">
